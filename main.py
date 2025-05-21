@@ -16,6 +16,7 @@ def index():
         if response.status_code == 200:
             data = response.json()
             drinks = data.get("drinks")
+            print(drinks)
     return render_template("search_result.html", drinks=drinks, query=query)
 
 
